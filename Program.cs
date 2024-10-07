@@ -39,21 +39,37 @@ namespace SampleConsoleApp
             //-------------------------------------------------
 
             //Program to print another pattern
-            Console.WriteLine("Enter the no of row: ");
-            int rows = Convert.ToInt32(Console.ReadLine());
-            int a = 1;
-            for (int i = 0; i < rows; i++)
+            //Console.WriteLine("Enter the no of row: ");
+            //int rows = Convert.ToInt32(Console.ReadLine());
+            //int a = 1;
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < rows - i; j++)
+            //    {
+            //        Console.Write(" ");
+            //    }
+            //    for (int k = 0; k <= i; k++)
+            //    {
+            //        Console.Write($"{a} ");
+            //        ++a;
+            //    }
+            //    Console.WriteLine();
+            //}
+
+            //-------------------------------------------------
+
+            //Program to show the use of break and continue 
+            for (int i = 0; i < 50; i++)
             {
-                for (int j = 0; j < rows - i; j++)
+                if (i % 2 == 0)
                 {
-                    Console.Write(" ");
+                    continue;
                 }
-                for (int k = 0; k <= i; k++)
+                if (i > 19)
                 {
-                    Console.Write($"{a} ");
-                    ++a;
+                    break;
                 }
-                Console.WriteLine();
+                Console.Write($"{i * 10} ");
             }
 
 
