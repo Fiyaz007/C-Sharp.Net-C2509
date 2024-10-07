@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleConsoleApp", "SampleConsoleApp.csproj", "{489A2240-585C-4FCD-ABAE-45B6A8EE7EF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C#.Net_C2509", "C#.Net_C2509.csproj", "{489A2240-585C-4FCD-ABAE-45B6A8EE7EF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

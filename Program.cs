@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SampleConsoleApp
+namespace C_Sharp.Net_C2509
 {
     internal class Program
     {
@@ -58,19 +58,23 @@ namespace SampleConsoleApp
 
             //-------------------------------------------------
 
-            //Program to show the use of break and continue 
-            for (int i = 0; i < 50; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    continue;
-                }
-                if (i > 19)
-                {
-                    break;
-                }
-                Console.Write($"{i * 10} ");
-            }
+            ////Program to show the use of break and continue 
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        continue;
+            //    }
+            //    if (i > 19)
+            //    {
+            //        break;
+            //    }
+            //    Console.Write($"{i * 10} ");
+            //}
+
+            //-------------------------------------------------
+
+
 
 
             Console.ReadLine();
