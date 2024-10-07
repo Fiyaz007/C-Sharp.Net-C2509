@@ -38,7 +38,23 @@ namespace SampleConsoleApp
 
             //-------------------------------------------------
 
-
+            //Program to print another pattern
+            Console.WriteLine("Enter the no of row: ");
+            int rows = Convert.ToInt32(Console.ReadLine());
+            int a = 1;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < rows - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k <= i; k++)
+                {
+                    Console.Write($"{a} ");
+                    ++a;
+                }
+                Console.WriteLine();
+            }
 
 
             Console.ReadLine();
