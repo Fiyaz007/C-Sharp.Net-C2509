@@ -74,7 +74,21 @@ namespace C_Sharp.Net_C2509
 
             //-------------------------------------------------
 
-
+            //Program to find a number is even or odd using switch statement
+            Console.WriteLine("Enter the number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            switch (num % 2)
+            {
+                case 0:
+                    Console.WriteLine($"The number {num} is even number");
+                    break;
+                case 1:
+                    Console.WriteLine($"The number {num} is odd number");
+                    break;
+                default:
+                    Console.WriteLine("Nothing");
+                    break;
+            }
 
 
             Console.ReadLine();
