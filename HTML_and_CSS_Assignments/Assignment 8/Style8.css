@@ -1,0 +1,101 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.Header {
+    margin-top: 50px;
+    font-family: 'Sharp Sans No. 1 Medium';
+    font-size: 27px;
+    text-align: center;
+    background: -webkit-linear-gradient(grey, Red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Pricing Table Container */
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+/* Individual Pricing Plan */
+.plan {
+    background-color: white;
+    border-radius: 10px;
+    margin: 0 15px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.7s;
+}
+
+    .plan:hover {
+        transform: scale(1.1);
+    }
+
+/* Plan Header */
+.plan-header {
+    background: -webkit-linear-gradient(Black, Red);
+    color: white;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+    .plan-header h3 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .plan-header .price {
+        font-size: 36px;
+        margin: 10px 0 0;
+    }
+
+/* Plan Features */
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+    .plan ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+        .plan ul li:last-child {
+            border-bottom: none;
+        }
+
+/* Select Button */
+.plan button {
+    background: -webkit-linear-gradient(Black, Red);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+    .plan button:hover {
+        background: -webkit-linear-gradient(grey, black);
+    }
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .pricing-table {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+}

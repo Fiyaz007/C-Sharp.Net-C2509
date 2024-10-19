@@ -1,0 +1,63 @@
+﻿body {
+    font-family:'Comic Sans MS';
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+}
+
+    .product-container img {
+        width: 200px;
+        height: auto;
+    }
+
+.product-details {
+    padding-left: 20px;
+}
+
+    .product-details h2 {
+        margin-top: 0;
+    }
+
+.product-features {
+    margin: 20px;
+    padding: 20px;
+}
+
+    .product-features ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .product-features li {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-right: 300px;
+        border-radius: 10px;
+    }
+
+.button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+}

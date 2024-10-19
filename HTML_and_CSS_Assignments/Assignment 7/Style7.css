@@ -1,0 +1,44 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    background-color: #ff0000;
+    position: fixed;
+    width: 100%;
+    display: flex;
+}
+
+    .navbar a {
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+         
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+        }
+.description {
+    padding: 60px;
+}
+@media screen and (max-width: 600px) {
+    .navbar{
+        flex-direction:column;
+    }
+    .navbar a{
+        display: block;
+        text-align: left;
+    }
+    .description{
+        padding-top: 180px;
+        padding-left: 0px;
+    }
+}
