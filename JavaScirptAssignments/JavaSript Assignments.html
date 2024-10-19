@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Java Script Assignments</title>
+</head>
+<body>
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 1: Sum of Two Numbers-->
+    <h2>1: Sum of Two Numbers</h2>
+
+    <label for="num1">Enter the first number:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label for="num2">Enter the second number:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="calculateSum()">Calculate Sum</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var sum = num1 + num2;
+            document.getElementById('result').innerHTML = "The sum is: " + sum;
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 2: Check if a Number is Even or Odd-->
+    <h2>2: Even or Odd Checker</h2>
+
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number"><br><br>
+
+    <button onclick="checkEvenOdd()">Check</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function checkEvenOdd() {
+            var num = parseInt(document.getElementById('number').value);
+
+            if (num % 2 === 0) {
+                document.getElementById('result').innerHTML = num + " is Even.";
+            } else {
+                document.getElementById('result').innerHTML = num + " is Odd.";
+            }
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 3: Find the Largest Number-->
+    <h2>3: Find the Largest Number</h2>
+
+    <label for="num1">Enter the first number:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label for="num2">Enter the second number:</label>
+    <input type="number" id="num2"><br><br>
+
+    <label for="num3">Enter the third number:</label>
+    <input type="number" id="num3"><br><br>
+
+    <button onclick="findLargest()">Find Largest</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function findLargest() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var num3 = parseFloat(document.getElementById('num3').value);
+
+            var largest = Math.max(num1, num2, num3);
+            document.getElementById('result').innerHTML = "The largest number is: " + largest;
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 4: Basic To-Do List-->
+    <h2>4: Simple To-Do List</h2>
+
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+
+            var task = document.getElementById('taskInput').value;
+            if (task) {
+                var li = document.createElement('li');
+                li.innerText = task;
+                document.getElementById('taskList').appendChild(li);
+                document.getElementById('taskInput').value = '';
+            } else {
+                alert("Please enter a task.");
+            }
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 5: Temperature Converter (Celsius to Fahrenheit)-->
+    <h2>5: Celsius to Fahrenheit Converter</h2>
+
+    <label for="celsiusInput">Enter temperature in Celsius:</label>
+    <input type="number" id="Input" placeholder="Celsius">
+    <button onclick="convertToFahrenheit()">Convert</button>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function convertToFahrenheit() {
+            var celsius = parseFloat(document.getElementById('Input').value);
+            var fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById('result').innerText = celsius + "°C = " + fahrenheit.toFixed(2) + "°F.";
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 6: Countdown Timer-->
+    <h2>6: Countdown Timer</h2>
+
+    <label for="secondsInput">Enter the number of seconds:</label>
+    <input type="number" id="secondsInput" placeholder="Seconds">
+    <button onclick="startTimer()">Start Timer</button>
+
+    <h2 id="timeRemaining"></h2>
+    <script>
+        function startTimer() {
+            var seconds = parseInt(document.getElementById('secondsInput').value);
+            document.getElementById('timeRemaining').innerHTML = seconds + " seconds remaining";
+            countdown = setInterval(function () {
+                seconds--;
+                if (seconds >= 0) {
+                    document.getElementById('timeRemaining').innerHTML = seconds + " seconds remaining";
+                } else {
+                    document.getElementById('timeRemaining').innerHTML = "Time's up!";
+                    clearInterval(countdown);
+                }
+            }, 1000);
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 7: Dynamic Color Changer-->
+    <h2>7: Change Background Color</h2>
+
+    <label for="colorInput">Select a color:</label>
+    <input type="color" id="colorInput">
+    <button onclick="changeBackgroundColor()">Change Color</button>
+
+    <script>
+        function changeBackgroundColor() {
+            var selectedColor = document.getElementById('colorInput').value;
+            document.body.style.backgroundColor = selectedColor;
+        }
+    </script><br /><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 8: Simple Calculator-->
+    <h2>8: Simple Calculator</h2>
+    <label for="num1">Enter the first number:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label for="num2">Enter the second number:</label>
+    <input type="number" id="num2"><br><br>
+
+    <label for="operation">Select operation:</label>
+    <select id="operation">
+        <option value="add">Addition (+)</option>
+        <option value="subtract">Subtraction (-)</option>
+        <option value="multiply">Multiplication (×)</option>
+        <option value="divide">Division (÷)</option>
+    </select><br><br>
+    <button onclick="performOperation()">Calculate</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function performOperation() {
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var operation = document.getElementById('operation').value;
+            var result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerHTML = "Please enter valid numbers!";
+                return;
+            }
+            if (operation === 'add') {
+                result = num1 + num2;
+            } else if (operation === 'subtract') {
+                result = num1 - num2;
+            } else if (operation === 'multiply') {
+                result = num1 * num2;
+            } else if (operation === 'divide') {
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    document.getElementById('result').innerHTML = "Cannot divide by zero!";
+                    return;
+                }
+            }
+            document.getElementById('result').innerHTML = "Result: " + result.toFixed(2);
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 9: Digital Clock-->
+    <h2>9: Simple Digital Clock</h2>
+    <button onclick="showClock()">SHOW CLOCK</button>
+    <h1 id="clock" style=" background-color: black; color: white; width: 10%"></h1>
+    <script>
+        function showClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            if (hours > 12) { hours = hours - 12; }
+
+            hours = (hours < 10) ? "0" + hours : hours;
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById('clock').innerHTML = timeString;
+            setInterval(showClock, 1000);
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 10: Tip Calculator-->
+    <h2>10: Tip Calculator</h2>
+
+    <label for="billAmount">Enter the bill amount:</label>
+    <input type="number" id="billAmount" placeholder="Bill Amount"><br><br>
+
+    <label for="tipPercentage">Select the tip percentage:</label>
+    <select id="tipPercentage">
+        <option value="0.1">10%</option>
+        <option value="0.15">15%</option>
+        <option value="0.2">20%</option>
+        <option value="0.25">25%</option>
+    </select><br><br>
+
+    <button onclick="calculateTip()">Calculate Total</button>
+    <h2 id="totalAmount"></h2>
+
+    <script>
+        function calculateTip() {
+            var billAmount = parseFloat(document.getElementById('billAmount').value);
+            var tipPercentage = parseFloat(document.getElementById('tipPercentage').value);
+            var tipAmount = billAmount * tipPercentage;
+            var totalAmount = billAmount + tipAmount;
+            document.getElementById('totalAmount').innerHTML = "Total bill (including tip): Rs." + totalAmount.toFixed(2);
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 11: Create a Simple Quiz Application-->
+    <h2>11: Multiple Choice Quiz</h2>
+    <form id="quizForm">
+        <div>
+            <h3>1. Which country has won the most ICC Cricket World Cups?</h3>
+            <label><input type="radio" name="q1" value="a"> India</label><br>
+            <label><input type="radio" name="q1" value="b"> New Zealand</label><br>
+            <label><input type="radio" name="q1" value="c"> Pakistan</label><br>
+            <label><input type="radio" name="q1" value="d"> Australia</label><br>
+        </div>
+
+        <div>
+            <h3>2. Which team has won the most IPL titles?</h3>
+            <label><input type="radio" name="q2" value="a"> MI</label><br>
+            <label><input type="radio" name="q2" value="b"> CSK</label><br>
+            <label><input type="radio" name="q2" value="c"> KKR</label><br>
+            <label><input type="radio" name="q2" value="d"> RCB</label><br>
+        </div>
+
+        <div>
+            <h3>3. Which Player has scored highest runs in an one day international match?</h3>
+            <label><input type="radio" name="q3" value="a"> Sachin</label><br>
+            <label><input type="radio" name="q3" value="b"> Chris Gayle </label><br>
+            <label><input type="radio" name="q3" value="c"> Rohit Sharma</label><br>
+            <label><input type="radio" name="q3" value="d"> Glen Maxwell</label><br>
+        </div>
+
+
+        <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+        const correctAnswers = {
+            q1: 'd',  
+            q2: 'a',  
+            q3: 'c'   
+        };
+
+        function submitQuiz() {
+            var score = 0;
+            let resultDiv = document.getElementById('results');
+            resultDiv.innerHTML = '';  
+
+            const questions = ['q1', 'q2', 'q3'];
+
+            questions.forEach((question, index) => {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                const resultText = document.createElement("p");
+
+                    if (userAnswer.value === correctAnswers[question]) {
+                        score++;
+                        resultText.textContent = `Question ${index + 1}: Correct`;
+                    } else {
+                        resultText.textContent = `Question ${index + 1}: Wrong`;
+                    }
+
+                resultDiv.appendChild(resultText);
+            });
+            const resultText = document.createElement("p");
+            resultText.textContent = `Score: ${score}/3`;
+            resultDiv.appendChild(resultText);
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 12: StopWatch-->
+    <h2>12: Simple Stopwatch</h2>
+    <h3 id="stopwatch">00:00</h3>
+
+    <button onclick="startStopwatch()">Start</button>
+    <button onclick="stopStopwatch()">Stop</button>
+    <button onclick="resetStopwatch()">Reset</button>
+
+    <script>
+        var stopwatchInterval;
+        var startTime = 0;
+        var elapsedTime = 0;
+        var running = false;
+
+        function startStopwatch() {
+            if (!running) {
+                running = true;
+                startTime = Date.now() - elapsedTime;
+                stopwatchInterval = setInterval(updateStopwatch, 1000);
+            }
+        }
+
+        function stopStopwatch() {
+            running = false;
+            clearInterval(stopwatchInterval);
+            elapsedTime = Date.now() - startTime;
+        }
+
+        function resetStopwatch() {
+            running = false;
+            clearInterval(stopwatchInterval);
+            startTime = 0;
+            elapsedTime = 0;
+            document.getElementById('stopwatch').innerText = "00:00";
+        }
+
+        function updateStopwatch() {
+            elapsedTime = Date.now() - startTime;
+            var seconds = Math.floor(elapsedTime / 1000);
+            var minutes = Math.floor(seconds / 60);
+
+            seconds %= 60;
+            minutes %= 60;
+
+            var displayTime = formatTime(minutes) + ":" + formatTime(seconds);
+            document.getElementById('stopwatch').innerHTML = displayTime;
+        }
+
+        function formatTime(time) {
+            return (time < 10) ? "0" + time : time;
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 13: Light/Dark Mode Toggle-->
+    <h2>13: Toggle between Light and Dark Mode</h2>
+    <button onclick="toggleMode()">Toggle Mode</button>
+
+    <script>
+        function toggleMode() {
+            if (document.body.style.backgroundColor === "black") {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+            } else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+            }
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 14: Random Quote Generator-->
+    <h2>14: Random Quote Generator</h2>
+
+    <p id="quoteDisplay">Click the button to see a random quote!</p>
+
+    <button onclick="generateRandomQuote()">Generate Quote</button>
+
+    <script>
+        var quotes = [
+            "The best way to predict the future is to create it.",
+            "Life is 10% what happens to us and 90% how we react to it.",
+            "Your time is limited, don't waste it living someone else's life.",
+            "The only limit to our realization of tomorrow is our doubts of today.",
+            "Success is not how high you have climbed, but how you make a positive difference to the world.",
+            "Believe you can and you're halfway there.",
+            "Don't watch the clock; do what it does. Keep going.",
+            "Everything you’ve ever wanted is on the other side of fear."
+        ];
+
+        function generateRandomQuote() {
+            var randomIndex = Math.floor(Math.random() * quotes.length);
+
+            document.getElementById('quoteDisplay').innerText = quotes[randomIndex];
+        }
+    </script><br /><br />
+
+    <!------------------------------------------------------------------------------------------------>
+    <!--Assignment 15: Image Carousel-->
+    <h2>15: Simple Image Carousel</h2>
+
+    <div id="carousel">
+        <img id="carouselImage" src="1.jfif" alt="Carousel Image" width="500" height="300">
+    </div>
+
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        var images = [
+            "1.jfif",
+            "2.jfif",
+            "3.jfif",
+            "4.jfif",
+            "5.jfif"
+        ];
+
+        var currentIndex = 0;
+
+        function nextImage() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            document.getElementById("carouselImage").src = images[currentIndex];
+        }
+
+        function previousImage() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            document.getElementById("carouselImage").src = images[currentIndex];
+        }
+    </script>
+
+    <!------------------------------------------------------------------------------------------------>
+</body>
+</html>
